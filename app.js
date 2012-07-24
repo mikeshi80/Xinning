@@ -17,7 +17,7 @@ app.configure(function(){
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.cookieParser('your secret here'));
+  app.use(express.cookieParser('6adfb183a4a2c94a2f92dab5ade762a47889a5a1'));
   app.use(express.session());
   app.use(app.router);
   app.use(require('less-middleware')({ src: __dirname + '/public' }));
