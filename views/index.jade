@@ -1,5 +1,46 @@
 extends layout
 
+append scripts
+    script(src='/javascripts/s3sliderPacked.js')
+    script
+        $(function(){
+            $('#headerSlider').s3Slider({timeOut:3000});
+        })
+
 block content
-  h1= title
-  p Welcome to #{title}
+    .row
+        .span6
+            #headerSlider
+                ul#headerSliderContent
+                    li#headerSliderImage
+                        a
+                            img(src='/images/headerSlider/1.jpg')
+                        span.top
+                            strong Some title
+                            p Some content
+                    li#headerSliderImage
+                        a
+                            img(src='/images/headerSlider/2.jpg')
+                        span.top
+                            strong Some title
+                            p Some content
+                    li#headerSliderImage
+                        a
+                            img(src='/images/headerSlider/3.jpg')
+                        span.top
+                            strong Some title
+                            p Some content
+                    li#headerSliderImage
+                        a
+                            img(src='/images/headerSlider/4.jpg')
+                        span.top
+                            strong Some title
+                            p Some content
+                    li#headerSliderImage
+                        a
+                            img(src='/images/headerSlider/5.jpg')
+                        span.top
+                            strong Some title
+                            p Some content
+
+
