@@ -43,6 +43,9 @@ a {
   top: 0;
   margin-left: 0;
 }
+#headerSliderContent img {
+  border-radius: 10px;
+}
 .headerSliderImage,
 .bodySliderImage {
   float: left;
@@ -85,22 +88,30 @@ a {
 .top {
   top: 0;
   left: 0;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
 }
 .bottom {
   bottom: 0;
   left: 0;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 .left {
   top: 0;
   left: 0;
   width: 110px !important;
   height: 280px;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
 }
 .right {
   right: 0;
   bottom: 0;
   width: 90px !important;
   height: 290px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 ul {
   list-style-type: none;
