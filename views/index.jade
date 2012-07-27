@@ -1,46 +1,13 @@
 extends layout
 
 append scripts
-    script(src='/javascripts/s3Slider.js')
-    script
-        $(function(){
-            $('#headerSlider').s3Slider({timeOut:3000});
-        });
+  script(src='/javascripts/s3Slider.js')
+  script
+    $(function(){
+      $('#headerSlider').s3Slider({timeOut:3000});
+    });
 
 block content
-    .row
-        .span6
-            #headerSlider
-                ul#headerSliderContent
-                    li.headerSliderImage
-                        a(href='#')
-                            img(src='/images/headerSlider/1.jpg')
-                        span.bottom
-                            strong Some title
-                            p Some content
-                    li.headerSliderImage
-                        a(href='#')
-                            img(src='/images/headerSlider/2.jpg')
-                        span.bottom
-                            strong Some title
-                            p Some content
-                    li.headerSliderImage
-                        a(href='#')
-                            img(src='/images/headerSlider/3.jpg')
-                        span.bottom
-                            strong Some title
-                            p Some content
-                    li.headerSliderImage
-                        a(href='#')
-                            img(src='/images/headerSlider/4.jpg')
-                        span.bottom
-                            strong Some title
-                            p Some content
-                    li.headerSliderImage
-                        a(href='#')
-                            img(src='/images/headerSlider/5.jpg')
-                        span.bottom
-                            strong Some title
-                            p Some content
-
-
+  .row
+    .span6
+      include includes/headerSlider
