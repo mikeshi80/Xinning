@@ -12,4 +12,8 @@ block content
     .span6
       include includes/headerSlider
       mixin slider('header', pics)
+    .span3.well
+      h1.title 政策新闻
+      each news in newses
+        p: a(href=news.link)=news.title
 

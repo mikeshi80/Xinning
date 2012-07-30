@@ -3,9 +3,9 @@
  * Module dependencies.
  */
 
-var express = require('express')
-  , routes = require('./routes')
-  , http = require('http');
+var express = require('express'),
+    routes = require('./routes'),
+    http = require('http');
 
 
 var app = express();

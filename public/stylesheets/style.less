@@ -1,3 +1,4 @@
+@import "elements";
 @radius                        : 7px;
 @headerWidth                   : 410px;
 @bodyWidth                     : 720px;
@@ -12,12 +13,6 @@ body {
 
 a {
   color                        : #00B7FF;
-}
-
-.opacity(@opacity) {
-    -moz-opacity               : @opacity;
-	-khtml-opacity             : @opacity;
-    opacity                    : @opacity;
 }
 
 .slider(@w, @h) {
@@ -64,30 +59,26 @@ a {
 .top {
 	top                        : 0;
 	left                       : 0;
-    border-top-left-radius     : @radius;
-    border-top-right-radius    : @radius;
+    .border-radius(@radius, 0, 0, @radius);
 }
 .bottom {
 	bottom                     : 0;
     left                       : 0;
-    border-bottom-left-radius  : @radius;
-    border-bottom-right-radius : @radius;
+    .border-radius(0, @radius, @radius, 0);
 }
 .left {
 	top                        : 0;
     left                       : 0;
 	width                      : 110px !important;
 	height                     : 280px;
-    border-top-left-radius     : @radius;
-    border-bottom-left-radius  : @radius;
+    .border-radius(0, 0, @radius, @radius);
 }
 .right {
 	right                      : 0;
 	bottom                     : 0;
 	width                      : 90px !important;
 	height                     : 290px;
-    border-top-right-radius    : @radius;
-    border-bottom-right-radius : @radius;
+    .border-radius(@radius, @radius, 0, 0);
 }
 ul { list-style-type           : none;}
 
@@ -101,4 +92,16 @@ ul { list-style-type           : none;}
 
 .headerSliderImage {
     .sliderImage(@headerWidth);
+}
+
+.span3.well > p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.title {
+    margin-top: -10px;
+    padding-bottom: 10px;
+    text-align: center;
 }
