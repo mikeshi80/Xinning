@@ -1,14 +1,13 @@
 @import "elements";
 @radius                        : 7px;
 @headerWidth                   : 410px;
-@bodyWidth                     : 720px;
 @headerHeight                  : 300px;
-@bodyHeight                    : 300px;
 
 body {
-  padding                      : 50px;
   padding-top                  : 0;
   font                         : 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  width                        : 960px;
+  margin                       : auto;
 }
 
 a {
@@ -94,20 +93,19 @@ ul { list-style-type           : none;}
     .sliderImage(@headerWidth);
 }
 
-.span3.well > p {
+.news {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
 .title {
-    margin-top: -10px;
     padding-bottom: 10px;
     text-align: center;
 }
 
 .intro {
+    white-space: pre-wrap;
     height: 200px;
-    white-space: normal; 
-    text-overflow: none;
+    font-size: 11px;
 }
