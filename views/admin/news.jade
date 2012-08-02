@@ -1,0 +1,13 @@
+extends layout
+block content
+  .row
+    .offset1.span10
+      form(method='post')
+        fieldset
+          legend 编辑文章
+          p
+            input.span10(type="text", name='title')
+          p
+            textarea.span10.editor(name='content')
+          p
+            input.btn.pull-right(type='submit', value='提交')

@@ -16,3 +16,5 @@ exports.index = function(req, res){
             intro: intro.intro
         });
 };
+
+exports.admin = require('./admin');
