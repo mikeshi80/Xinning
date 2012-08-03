@@ -166,3 +166,4 @@ pip-log.txt
 node_modules
 
 public/stylesheets/*.css
+public/uploads/*
