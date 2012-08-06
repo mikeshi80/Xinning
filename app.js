@@ -34,7 +34,7 @@ app.configure('development', function(){
 app.get('/', routes.index);
 app.get('/admin/news_edit', routes.admin.news_edit);
 app.post('/admin/news_edit', routes.admin.news_save);
-app.post('/uploader', require('./routes/uploader').uploader);
+app.post('/ckeditor_uploader', require('./routes/uploader').ckeditor_uploader);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

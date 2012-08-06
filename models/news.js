@@ -74,3 +74,7 @@ exports.remove = function(id, callback) {
         }
     });
 };
+
+exports.list = function(limit, callback) {
+    News.find({type: ['show', 'stick']}).desc('date').limit(limit);
+};

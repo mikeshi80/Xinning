@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-exports.uploader = function(req, res) {
+exports.ckeditor_uploader = function(req, res) {
     var upload = req.files.upload;
     fs.readFile(upload.path, function(err, data) {
         var path = require('path');
