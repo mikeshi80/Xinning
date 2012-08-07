@@ -31,6 +31,12 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
+var db = require('./db');
+
+db.connect();
+
+app.on('close', db.disconnect);
+
 app.get('/', routes.index);
 app.get('/admin/news_edit', routes.admin.news_edit);
 app.post('/admin/news_edit', routes.admin.news_save);

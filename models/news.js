@@ -5,7 +5,7 @@ var ObjectId = Schema.ObjectId;
 var NewsSchema = new Schema({
     title: String,
     content: String,
-    date: {type: Date, default: new Date()},
+    date: {type: Date, default: Date.now},
     /**
      * editing -- it is still been editing, so not show
      * show    -- it will show
@@ -76,5 +76,5 @@ exports.remove = function(id, callback) {
 };
 
 exports.list = function(limit, callback) {
-    News.find({type: ['show', 'stick']}).desc('date').limit(limit);
+    News.find({type: {$in: ['show', 'stick']}}).desc('date').limit(limit).exec(callback);
 };
