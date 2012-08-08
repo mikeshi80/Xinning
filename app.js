@@ -6,7 +6,9 @@
 var express = require('express'),
     routes  = require('./routes'),
     conf    = require('./conf').conf,
-    http    = require('http');
+    http    = require('http'),
+    s3 = require('connect-stream-s3'),
+    s3Middleware = s3(conf.s3_opts);
 
 
 var app     = express();
@@ -27,7 +29,7 @@ app.configure(function(){
   app.use(express.static(__dirname + conf.static_dir));
 });
 
-app.configure('development', function(){
+app.configure('development', function() {
   app.use(express.errorHandler());
 });
 
