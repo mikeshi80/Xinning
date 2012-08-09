@@ -1,6 +1,6 @@
 {
   "name": "application-name",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "start": "node app"
@@ -10,6 +10,8 @@
     "jade": "*",
     "less-middleware": "*",
     "mongoose": "*",
-    "connect-stream-s3": "*"
+    "awssum": "~0.7.0",
+    "async": "~0.1.18",
+    "mime": "*"
   }
 }

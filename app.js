@@ -7,7 +7,8 @@ var express = require('express'),
     routes  = require('./routes'),
     conf    = require('./conf').conf,
     http    = require('http'),
-    s3 = require('connect-stream-s3'),
+    uploader = require('./routes/uploader'),
+    s3 = require('./my-connect-stream-s3'),
     s3Middleware = s3(conf.s3_opts);
 
 
@@ -42,7 +43,7 @@ app.on('close', db.disconnect);
 app.get('/', routes.index);
 app.get('/admin/news_edit', routes.admin.news_edit);
 app.post('/admin/news_edit', routes.admin.news_save);
-app.post('/ckeditor_uploader', require('./routes/uploader').ckeditor_uploader);
+app.post('/ckeditor_uploader', uploader.s3NameMiddleware, s3Middleware, uploader.ckeditor_uploader);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

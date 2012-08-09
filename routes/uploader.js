@@ -8,10 +8,10 @@ var basepath = 'https://s3-' + s3_opts.region + '.amazonaws.com/' + s3_opts.buck
 exports.s3NameMiddleware = function (req, res, next) {
     var upload = req.files.upload;
     req.files.upload.s3ObjectName = path.basename(upload.path) + path.extname(upload.name);
+    next();
 };
 exports.ckeditor_uploader = function(req, res) {
-    //fs.unlink(upload.path);
-    var url = '/uploads/images/editor/' + filename;
+    var url = basepath + req.files.upload.s3ObjectName;
     res.send('<script>window.parent.CKEDITOR.tools.callFunction(' +
                 req.query.CKEditorFuncNum + ', "' + url + '");</script>');
 };
