@@ -9,12 +9,13 @@ append scripts
 block content
   .row
     .span12
-      form(method='post')
+      form(method='post', action='/admin/news/save')
         fieldset
           legend 编辑文章
+          input(type='hidden', name='id', value=news.id)
           p
-            input.span12(type="text", name='title')
+            input.span12(type="text", name='title', value=news.title)
           p
-            textarea.span12.editor(name='content')
+            textarea.span12.editor(name='content') !{news.content}
           p
             input.btn.pull-right(type='submit', value='提交')

@@ -9,5 +9,19 @@ html
       script(src='/javascripts/jquery-1.7.2.min.js') 
 
   body
+    header
+      .navbar
+        .navbar-inner
+          .container
+            .brand
+              | 馨宁公寓 管理
+            ul.nav
+              li.active: a(href='/admin') 管理首页
+              li: a(herf='/admin/news') 政策新闻
+              li: a(href='/admin/info') 生活信息
+              li: a(href='/admin/life') 居民生活
+              li: a(href='/admin/mangage') 物业信箱
+            ul.nav.pull-right
+              li.pull-left: a(href='/logout') 登出
     block content
     block footer

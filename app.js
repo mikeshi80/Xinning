@@ -41,8 +41,13 @@ db.connect();
 app.on('close', db.disconnect);
 
 app.get('/', routes.index);
-app.get('/admin/news_edit', routes.admin.news_edit);
-app.post('/admin/news_edit', routes.admin.news_save);
+app.get('/admin', routes.admin.index);
+app.get('/admin/index', routes.admin.index);
+
+app.get('/admin/news/edit/:id?', routes.admin.news.edit);
+app.post('/admin/news/save/:id?', routes.admin.news.save);
+app.get('/admin/news/:id', routes.admin.news.preview);
+
 app.post('/ckeditor_uploader', uploader.s3NameMiddleware, s3Middleware, uploader.ckeditor_uploader);
 
 http.createServer(app).listen(app.get('port'), function(){

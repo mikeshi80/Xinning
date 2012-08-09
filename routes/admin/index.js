@@ -1,3 +1,9 @@
 var news = require('./news');
-exports.news_edit = news.edit;
-exports.news_save = news.save;
+var dbNews = require('../../models/news');
+exports.news = news;
+
+exports.index = function(req, res) {
+    dbNews.listTitles(5, function(err, newses) {
+        res.render('admin/index', {newses: newses});
+    });
+};

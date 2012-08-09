@@ -1,3 +1,7 @@
 extends layout
 block content
-  p OK
+  .news
+    ul
+      each news in newses
+        li
+          a(href='news/' + news._id)=news.title

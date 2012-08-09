@@ -1,0 +1,7 @@
+extends layout
+block content
+  h1.title=news.title
+  a(href='edit/#{news._id}') 编辑
+  p.date.pull-right=news.date
+  p.content !{news.content}
+
