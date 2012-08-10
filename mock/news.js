@@ -39,9 +39,4 @@ exports.newses=[
     title: 'Reddit 评论排名算法',
     content: ''
 },
-{
-    link: '#',
-    title: '易相处员工的薪酬显著低于不易相处者，男性员工更甚',
-    content: ''
-}
 ];

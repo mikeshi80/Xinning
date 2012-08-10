@@ -50,14 +50,17 @@ exports.edit = function(id, title, content, callback) {
             if (title !== null && news.title !== title) {
                 news.title = title;
                 changed = true;
+                console.log('title is changed');
             }
             if (content !== null && news.content !== content) {
                 news.content = content;
                 changed = true;
+                console.log('content is changed');
             }
 
             if (changed) {
                 news.date = new Date();
+                news.save();
             }
 
             callback(null, news);

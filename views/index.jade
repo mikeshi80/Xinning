@@ -13,23 +13,23 @@ block content
       include includes/headerSlider
       mixin slider('header', pics)
     .span3
-      .well
+      .well.well-height
         h1.title 最新消息
         each news in newses
           p.news: a(href=news.link)=news.title
     .span3
-      .well
+      .well.well-height
         h1.title 馨宁简介
         p.intro= intro
         a.pull-right More...
   .row
     .span3
-      .well
+      .well.well-height
         h1.title 政策新闻
         each news in newses
           p.news: a(href=news.link)=news.title
     .span3
-      .well
+      .well.well-height
         h1.title 生活指南
         each news in newses
           p.news: a(href=news.link)=news.title

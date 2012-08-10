@@ -5,23 +5,23 @@ html
     title= title
     block styles
       link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
-        link(rel='stylesheet', href='/stylesheets/style.css')
+      link(rel='stylesheet', href='/stylesheets/style.css')
     block scripts
       script(src='/javascripts/jquery-1.7.2.min.js')
-        body
-          header
-            .navbar
-              .navbar-inner
-                .container
-                  .brand
-                    | 馨宁公寓
-                    ul.nav
-                      li.active: a(href='/') 首页
-                        li: a(href='/news') 政策新闻
-                        li: a(href='/info') 生活信息
-                        li: a(href='/life') 居民生活
-                        li: a(href='/mangage') 物业信箱
-                        li: a(href='/contribute') 欢迎来稿
-                    ul.nav.pull-right
-                      li.pull-left: a(href='/login') 用户登录
-    block content
+    body
+      header
+        .navbar
+          .navbar-inner
+            .container
+              .brand
+                | 馨宁公寓
+              ul.nav
+                li.active: a(href='/') 首页
+                  li: a(href='/news') 政策新闻
+                  li: a(href='/info') 生活信息
+                  li: a(href='/life') 居民生活
+                  li: a(href='/mangage') 物业信箱
+                  li: a(href='/contribute') 欢迎来稿
+              ul.nav.pull-right
+                li.pull-left: a(href='/login') 用户登录
+      block content

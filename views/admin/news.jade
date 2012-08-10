@@ -17,5 +17,6 @@ block content
             input.span12(type="text", name='title', value=news.title)
           p
             textarea.span12.editor(name='content') !{news.content}
-          p
-            input.btn.pull-right(type='submit', value='提交')
+          p.pull-right
+            input.btn(type='submit', value='提交', style='margin-right: 4px')
+            a.btn(href='/admin') 放弃

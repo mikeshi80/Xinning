@@ -1,7 +1,8 @@
 extends layout
 block content
-  .news
-    ul
-      each news in newses
-        li
-          a(href='news/' + news._id)=news.title
+  .row
+    .news.span6
+      ul.well
+        each news in newses
+          li
+            a(href='/admin/news/' + news._id)=news.title
