@@ -1,7 +1,9 @@
 extends layout
 block content
   h1.title=news.title
-  a(href='edit/#{news._id}') 编辑
-  p.date.pull-right=news.date
+  .btn-group
+    a.btn(href='edit/#{news._id}') 编辑
+    a.btn(href='delete/#{news._id}') 删除
+  p.date.pull-right=news.date.getFullYear() + '年' + (news.date.getMonth() + 1) + '月' + news.date.getDate() + '日'
   p.content !{news.content}
 
