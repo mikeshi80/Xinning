@@ -79,9 +79,9 @@ exports.remove = function(id, callback) {
 };
 
 exports.list = function(limit, callback) {
-    News.find({type: {$in: ['show', 'stick']}}).desc('date').limit(limit).exec(callback);
+    News.find({type: {$in: ['show', 'stick']}}).sort({'date': -1}).limit(limit).exec(callback);
 };
 
 exports.listTitles = function(limit, callback) {
-    News.find({type: {$in: ['show', 'stick']}}).desc('date').limit(limit).select('_id title').exec(callback);
+    News.find({type: {$in: ['show', 'stick']}}).sort({'date': -1}).limit(limit).select('_id title').exec(callback);
 };
