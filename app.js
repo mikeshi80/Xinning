@@ -27,7 +27,7 @@ app.configure(function(){
   app.use(express.session());
   app.use(app.router);
   app.use(require('less-middleware')({ src: __dirname + conf.less_dir}));
-  app.use(express.static(__dirname + conf.static_dir));
+  app.use(express['static'](__dirname + conf.static_dir));
 });
 
 app.configure('development', function() {
@@ -41,6 +41,7 @@ db.connect();
 app.on('close', db.disconnect);
 
 app.get('/', routes.index);
+app.get('/news/:id', routes.news);
 app.get('/admin', routes.admin.index);
 app.get('/admin/index', routes.admin.index);
 

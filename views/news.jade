@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  .row
+    .span9
+      h1.hero-unit=news.title
+      .pull-right=news.date
+      .content !{news.content}
+    .span3
+      .well Related News

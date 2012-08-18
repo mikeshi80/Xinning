@@ -16,7 +16,7 @@ block content
       .well.well-height
         h1.title 最新消息
         each news in newses
-          p.news: a(href=news.link)=news.title
+          p.news: a(href='/news/#{news._id}')=news.title
     .span3
       .well.well-height
         h1.title 馨宁简介

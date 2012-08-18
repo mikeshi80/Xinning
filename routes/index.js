@@ -36,10 +36,35 @@ exports.index = function(req, res){
         if (err) {
             res.send('Something error raised, err is ' + err);
         } else {
+            console.log(util.inspect(results));
             res.render('index', results);
         }
     });
 
+};
+
+var util = require('util');
+
+exports.news = function(req, res) {
+    async.parallel({
+        news: function(callback) {
+                  db_news.getById(req.params.id, function(err, news) {
+                      callback(err, news);
+                  });
+              },
+        title: function(callback) {
+                   process.nextTick(function() {
+                       callback(null, 'News');
+                   });
+               }
+    }, function(err, results) {
+        if (err) {
+            res.send('Something error raised, err is ' + err);
+        } else {
+            console.log(util.inspect(results));
+            res.render('news', results);
+        }
+    });
 };
 
 exports.admin = require('./admin');

@@ -5,14 +5,14 @@ var ObjectId = Schema.ObjectId;
 var NewsSchema = new Schema({
     title: String,
     content: String,
-    date: {type: Date, default: Date.now},
+    date: {type: Date, 'default': Date.now},
     /**
      * editing -- it is still been editing, so not show
      * show    -- it will show
      * hide    -- it will not show
      * stick   -- it will always be sticked
      */
-    type: {type: String, enum: ['editing', 'show', 'hide', 'stick'], default: 'show'}
+    type: {type: String, 'enum': ['editing', 'show', 'hide', 'stick'], 'default': 'show'}
 
 });
 

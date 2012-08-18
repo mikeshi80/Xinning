@@ -10,7 +10,7 @@ exports.conf = {
         secretAccessKey : process.env.SECRET_ACCESS_KEY,
         awsAccountId    : process.env.AWS_ACCOUNT_ID,
         region          : amazon.AP_SOUTHEAST_1,
-        bucketName      : 'xinning',
+        bucketName      : 'xinning'
         //concurrency     : 2, // number of concurrent uploads to S3 (default: 3)
     }
 
