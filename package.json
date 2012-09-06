@@ -12,6 +12,7 @@
     "mongoose": "*",
     "awssum": "~0.7.0",
     "async": "~0.1.18",
-    "mime": "*"
+    "mime": "*",
+    "everyauth": "*"
   }
 }
